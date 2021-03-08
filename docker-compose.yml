@@ -12,6 +12,7 @@ volumes:
 services:
   postgresql:
     image: 'bitnami/postgresql:13.2.0'
+    restart: unless-stopped
     volumes:
       - postgresql_data:/bitnami/postgresql
     environment:
